@@ -1,0 +1,34 @@
+ @import "tailwindcss";
+ @import url(../public/images/kalam/Kalam-Regular.ttf);
+ @theme{
+    --font-kalam:"Kalam Regular",cursive ;
+    --animate-h1: h1 2s linear infinate;
+    --animate-line: line 3s ease-in infinate;
+ }
+ @keyframes h1{
+   0%{
+      background-image:url("../public/images/slide1.jpg");
+   }
+   50%{
+      background-image: url("../public/images/slide2.jpg");
+   }
+   100%{
+      background-image: url("../public/images/slide3.jpg");
+   }
+    
+ }
+ @keyframes line{
+   0%{
+      width: 500px;
+   }
+   100%{
+      width: 900px;
+   }
+ }
+ @layer components{
+   .divRotate{
+     @apply w-[100px] h-[140px] border border-gray-300 bg-transparent rounded-md rotate-45  inline-block hover:border-gray-600 transition-all duration-700;
+   }
+ }
+
+
